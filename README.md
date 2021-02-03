@@ -115,3 +115,5 @@ Add the following to your `pom.xml`:
     </repository>
   </distributionManagement>
 ```
+
+To publish to GPR run `mvn deploy`
