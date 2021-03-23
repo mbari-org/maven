@@ -117,3 +117,36 @@ Add the following to your `pom.xml`:
 ```
 
 To publish to GPR run `mvn deploy`
+
+### Gradle
+
+Add the following to your root `build.gradle` in your project:
+
+```groovy
+subprojects {
+
+  // ...
+
+  publishing {
+      repositories {
+         maven {
+             name = "GitHubPackages"
+             url = uri("https://maven.pkg.github.com/mbari-org/maven")
+             credentials {
+                 username = project.findProperty("gpr.user") ?: System.getenv("GITHUB_USER")
+                 password = project.findProperty("gpr.key") ?: System.getenv("GITHUB_TOKEN")
+             }
+         }
+      }
+      publications {
+          gpr(MavenPublication) {
+              groupId "my.projects.package"
+              artifactId project.name
+              from components.java
+          }
+      }
+  }
+  
+}
+
+```
