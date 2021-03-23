@@ -126,6 +126,8 @@ Add the following to your root `build.gradle` in your project:
 subprojects {
 
   // ...
+  
+  apply plugin: 'maven-publish'
 
   publishing {
       repositories {
