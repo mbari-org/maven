@@ -96,7 +96,7 @@ repositories {
 
 ### SBT
 
-There is an [sbt-github-packages] plugin. This still needs to be tested. Notes about publication can be found [here](https://gist.github.com/djspiewak/2359e5d742cd0d7161cf3422e36fcaf3).
+There is an [sbt-github-packages](https://github.com/djspiewak/sbt-github-packages) plugin. Notes about publication can be found [here](https://gist.github.com/djspiewak/2359e5d742cd0d7161cf3422e36fcaf3).
 
 ## Developer Usage
 
